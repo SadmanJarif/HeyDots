@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - HeyDots</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6',
+                        secondary: '#ec4899'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 left-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-md rounded-full border border-white/10 shadow-lg shadow-black/5 px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center">
+                    <span class="text-2xl font-['Pacifico'] text-white">HeyDots</span>
+                </a>
+                <div class="hidden md:flex-1 md:flex items-center justify-center space-x-8">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Home</a>
+                        <a href="index.html#features" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Features</a>
+                        <a href="index.html#services" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Services</a>
+                        <a href="index.html#contact" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Contact</a>
+                        <a href="roi-calculator.html" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">AI ROI Calculator</a>
+                    </div>
+                </div>
+                <button 
+                    class="hidden md:inline-block px-8 py-2.5 bg-gradient-to-r from-primary/80 to-secondary/80 hover:from-primary hover:to-secondary rounded-full text-white font-medium transition-all duration-300 shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] hover:scale-105"
+                    data-cal-link="heydots/30min"
+                    data-cal-namespace="30min"
+                    data-cal-config='{"layout":"month_view"}'
+                >
+                    Get Started
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-white">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-20 left-0 w-full bg-[#151030] bg-opacity-95 z-50 px-6 py-6 flex flex-col space-y-6 md:hidden transition-all duration-300 transform -translate-y-10 opacity-0 pointer-events-none">
+            <a href="index.html" class="text-white hover:text-primary transition-all duration-300">Home</a>
+            <a href="index.html#features" class="text-white hover:text-primary transition-all duration-300">Features</a>
+            <a href="index.html#services" class="text-white hover:text-primary transition-all duration-300">Services</a>
+            <a href="index.html#contact" class="text-white hover:text-primary transition-all duration-300">Contact</a>
+            <a href="roi-calculator.html" class="text-white hover:text-primary transition-all duration-300">AI ROI Calculator</a>
+            <button 
+                class="px-8 py-2.5 bg-gradient-to-r from-primary/80 to-secondary/80 hover:from-primary hover:to-secondary rounded-full text-white font-medium transition-all duration-300 shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] hover:scale-105 text-center"
+                data-cal-link="heydots/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view"}'
+            >
+                Get Started
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Cookie Policy
+                </h1>
+                <p class="text-gray-400 text-lg">
+                    Last updated: January 2025
+                </p>
+            </div>
+
+            <!-- Content -->
+            <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 md:p-12 space-y-8">
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">1. What Are Cookies</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        Cookies are small text files that are placed on your computer or mobile device when you visit our website. They are widely used to make websites work more efficiently and to provide information to website owners about how users interact with their sites.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">2. How We Use Cookies</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        HeyDots uses cookies to enhance your browsing experience and improve our services. We use cookies for the following purposes:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Essential website functionality and security</li>
+                        <li>Remembering your preferences and settings</li>
+                        <li>Analyzing website traffic and user behavior</li>
+                        <li>Improving our website performance and user experience</li>
+                        <li>Providing personalized content and recommendations</li>
+                        <li>Marketing and advertising purposes (with your consent)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">3. Types of Cookies We Use</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <h3 class="text-lg font-medium mb-3 text-white">Essential Cookies</h3>
+                            <p class="text-gray-300 leading-relaxed mb-2">
+                                These cookies are necessary for the website to function properly and cannot be disabled.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+                                <li>Session management and security</li>
+                                <li>Load balancing and website functionality</li>
+                                <li>Form submission and user authentication</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <h3 class="text-lg font-medium mb-3 text-white">Performance Cookies</h3>
+                            <p class="text-gray-300 leading-relaxed mb-2">
+                                These cookies help us understand how visitors interact with our website by collecting anonymous information.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+                                <li>Google Analytics for website traffic analysis</li>
+                                <li>Page load times and error tracking</li>
+                                <li>User journey and behavior analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <h3 class="text-lg font-medium mb-3 text-white">Functional Cookies</h3>
+                            <p class="text-gray-300 leading-relaxed mb-2">
+                                These cookies enable enhanced functionality and personalization features.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+                                <li>Language and region preferences</li>
+                                <li>User interface customizations</li>
+                                <li>Chat widget and support features</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white/5 rounded-lg p-6 border border-white/10">
+                            <h3 class="text-lg font-medium mb-3 text-white">Marketing Cookies</h3>
+                            <p class="text-gray-300 leading-relaxed mb-2">
+                                These cookies are used to deliver relevant advertisements and track marketing campaign effectiveness.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+                                <li>Targeted advertising and retargeting</li>
+                                <li>Social media integration</li>
+                                <li>Campaign performance tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">4. Third-Party Cookies</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        We may use third-party services that place cookies on your device. These include:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <h4 class="font-medium text-white mb-2">Google Analytics</h4>
+                            <p class="text-gray-300 text-sm">Website traffic and user behavior analysis</p>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <h4 class="font-medium text-white mb-2">Cal.com</h4>
+                            <p class="text-gray-300 text-sm">Meeting scheduling and calendar integration</p>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <h4 class="font-medium text-white mb-2">Social Media Platforms</h4>
+                            <p class="text-gray-300 text-sm">Social sharing and integration features</p>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <h4 class="font-medium text-white mb-2">Marketing Tools</h4>
+                            <p class="text-gray-300 text-sm">Email marketing and lead tracking</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">5. Cookie Duration</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-lg font-medium mb-2 text-white">Session Cookies</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                These cookies are temporary and are deleted when you close your browser. They are essential for website functionality during your visit.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium mb-2 text-white">Persistent Cookies</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                These cookies remain on your device for a specified period (typically 30 days to 2 years) or until you delete them. They help us remember your preferences across visits.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">6. Managing Your Cookie Preferences</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        You have several options for managing cookies:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <h4 class="font-medium text-white mb-2">Browser Settings</h4>
+                            <p class="text-gray-300 text-sm">
+                                Most browsers allow you to control cookies through their settings. You can block, delete, or receive notifications about cookies.
+                            </p>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <h4 class="font-medium text-white mb-2">Cookie Banner</h4>
+                            <p class="text-gray-300 text-sm">
+                                When you first visit our website, you can choose which types of cookies to accept through our cookie consent banner.
+                            </p>
+                        </div>
+                        <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                            <h4 class="font-medium text-white mb-2">Opt-Out Links</h4>
+                            <p class="text-gray-300 text-sm">
+                                For third-party cookies, you can often opt out directly through the service provider's website or privacy settings.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">7. Impact of Disabling Cookies</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        While you can disable cookies, please note that doing so may affect your experience on our website:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Some website features may not function properly</li>
+                        <li>You may need to re-enter information on each visit</li>
+                        <li>Personalized content and recommendations may not be available</li>
+                        <li>We may not be able to remember your preferences</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">8. Updates to This Cookie Policy</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by posting the updated policy on our website and updating the "Last updated" date.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4 text-primary">9. Contact Us</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        If you have any questions about our use of cookies or this Cookie Policy, please contact us:
+                    </p>
+                    <div class="mt-4 p-4 bg-white/5 rounded-lg border border-white/10">
+                        <p class="text-white font-medium">HeyDots</p>
+                        <p class="text-gray-300">Email: info@heydots.com</p>
+                        <p class="text-gray-300 mt-2">
+                            For more information about our privacy practices, please see our 
+                            <a href="privacy-policy.html" class="text-primary hover:text-secondary transition-colors underline">Privacy Policy</a>.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0A071A] border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-['Pacifico'] text-white">HeyDots</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Revolutionizing sales with AI-powered agents that work 24/7 to qualify leads, book meetings, and accelerate your revenue growth.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
+                            <i class="ri-twitter-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
+                            <i class="ri-linkedin-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
+                            <i class="ri-facebook-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#features" class="text-gray-400 hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="roi-calculator.html" class="text-gray-400 hover:text-primary transition-colors">ROI Calculator</a></li>
+                        <li><a href="index.html#testimonials" class="text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="index.html#faq" class="text-gray-400 hover:text-primary transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Get in Touch</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="ri-mail-line mr-2"></i>
+                            <span>info@heydots.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2025 HeyDots. All rights reserved.
+                </p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="privacy-policy.html" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="cookie-policy.html" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cal.com embed script -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "30min", {origin:"https://app.cal.com"});
+
+    Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            let open = false;
+            
+            if (btn && menu) {
+                btn.addEventListener('click', function() {
+                    open = !open;
+                    if (open) {
+                        menu.classList.remove('-translate-y-10', 'opacity-0', 'pointer-events-none');
+                        menu.classList.add('translate-y-0', 'opacity-100');
+                    } else {
+                        menu.classList.add('-translate-y-10', 'opacity-0', 'pointer-events-none');
+                        menu.classList.remove('translate-y-0', 'opacity-100');
+                    }
+                });
+                
+                // Close menu when clicking a link
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        open = false;
+                        menu.classList.add('-translate-y-10', 'opacity-0', 'pointer-events-none');
+                        menu.classList.remove('translate-y-0', 'opacity-100');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
