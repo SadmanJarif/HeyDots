@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeyDots - AI Sales Accelerator</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -188,53 +187,6 @@
         .chat-message-user {
             animation: fadeIn 0.5s ease-out;
         }
-        
-        /* Our Works Carousel Animation */
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .works-carousel-outer {
-            overflow: hidden;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        .works-carousel {
-            display: flex;
-            width: max-content;
-            min-width: 100%;
-            animation: scroll 22s linear infinite; /* Lowered speed (was 14s) */
-        }
-
-        .works-carousel:hover {
-            animation-play-state: paused;
-        }
-
-        .work-item {
-            flex-shrink: 0;
-            width: 20rem;
-            height: 16rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @media (max-width: 768px) {
-            .work-item {
-                width: 280px;
-                height: 200px;
-            }
-            .works-carousel-outer {
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
-            }
-        }
     </style>
 </head>
 <body class="bg-black text-white min-h-screen relative">
@@ -255,9 +207,8 @@
                             <a href="#" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Home</a>
                             <a href="#features" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Features</a>
                             <a href="#services" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Services</a>
-                                                    <a href="#contact" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Contact</a>
-                        <a href="who-we-are.html" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Who We Are</a>
-                        <a href="roi-calculator.html" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">AI ROI Calculator</a>
+                            <a href="#contact" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">Contact</a>
+                            <a href="roi-calculator.html" class="text-white hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300">AI ROI Calculator</a>
                         </div>
                     </div>
                     <a href="#" 
@@ -277,7 +228,6 @@
                 <a href="#features" class="text-white hover:text-primary transition-all duration-300">Features</a>
                 <a href="#services" class="text-white hover:text-primary transition-all duration-300">Services</a>
                 <a href="#contact" class="text-white hover:text-primary transition-all duration-300">Contact</a>
-                <a href="who-we-are.html" class="text-white hover:text-primary transition-all duration-300">Who We Are</a>
                 <a href="roi-calculator.html" class="text-white hover:text-primary transition-all duration-300">AI ROI Calculator</a>
                 <a href="#" 
                    class="px-8 py-2.5 bg-gradient-to-r from-primary/80 to-secondary/80 hover:from-primary hover:to-secondary rounded-full text-white font-medium transition-all duration-300 shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] hover:scale-105 text-center"
@@ -560,6 +510,104 @@
         </div>
     </section>
 
+     <!-- Main Content -->
+    <div class="pt-24 min-h-screen">
+        <!-- Hero Section -->
+        <div class="relative z-20 flex flex-col items-center justify-center px-6 py-24 text-center">
+            <span class="text-primary font-medium mb-4 text-lg">About Us</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 max-w-5xl leading-tight">Who <span class="gradient-text">We Are</span></h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl leading-relaxed">Discover the team behind HeyDots and our mission to revolutionize sales automation with cutting-edge AI technology.</p>
+        </div>
+
+        <!-- Canva Embed Section -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+            <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-4 sm:p-8 shadow-xl">
+                
+                <!-- Canva Embed -->
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                 border-radius: 8px; will-change: transform;">
+                  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                    src="https://www.canva.com/design/DAGuvrXXv3Y/HJ26Poxab-lPsz67BxcAxQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                  </iframe>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="https://www.canva.com/design/DAGuvrXXv3Y/HJ26Poxab-lPsz67BxcAxQ/view?utm_content=DAGuvrXXv3Y&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" class="text-primary hover:text-secondary transition-colors duration-300"></a>
+                </div>
+                <div class="text-center mt-6">
+                    <p class="text-gray-300 text-lg font-medium">
+                        <i class="ri-arrow-left-right-line mr-2"></i>
+                        Slide right or left to see the presentation
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Content Section -->
+        <div class="max-w-6xl mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mission -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-rocket-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Mission</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        To empower businesses with intelligent AI-driven sales automation that works 24/7, 
+                        allowing sales teams to focus on what they do best - closing deals and building relationships.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-eye-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Vision</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        To create a world where every business can scale their sales operations effortlessly 
+                        through intelligent automation, making success accessible to companies of all sizes.
+                    </p>
+                </div>
+
+                <!-- Values -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-heart-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Values</h3>
+                    </div>
+                    <ul class="text-gray-300 leading-relaxed space-y-2">
+                        <li>• Innovation at the core of everything we do</li>
+                        <li>• Customer success is our success</li>
+                        <li>• Transparency and trust in all relationships</li>
+                        <li>• Continuous improvement and learning</li>
+                    </ul>
+                </div>
+
+                <!-- Team -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-team-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Our Team</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        A passionate group of AI experts, sales professionals, and technology innovators 
+                        dedicated to transforming how businesses approach sales automation and lead generation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+      
+
     <!-- Services Section -->
     <section id="services" class="py-20 px-4 md:px-8 bg-[#0A071A]">
         <div class="container mx-auto">
@@ -772,70 +820,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Our Works Section -->
-    <section class="py-20 px-4 md:px-8 bg-[#0F0A1F] overflow-hidden">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Works</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Discover our latest projects and success stories that showcase our Web & AI solutions in action.</p>
-            </div>
-            
-            <!-- Auto-sliding Carousel with spacing and infinite loop -->
-            <div class="relative works-carousel-outer">
-                <div class="works-carousel" id="works-carousel">
-                    <!-- Image 1 -->
-                    <div class="work-item">
-                        <img src="https://framerusercontent.com/images/gJPXKjaGjabrxBY4BjF1R3uw.png?scale-down-to=512" 
-                             alt="AI Sales Automation Project" 
-                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
-                    </div>
-                    <!-- Image 2 -->
-                    <div class="work-item">
-                        <img src="https://framerusercontent.com/images/8WN2RkFuCsGMTItgLfMdoCOGY.png?scale-down-to=512" 
-                             alt="AI Lead Generation System" 
-                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
-                    </div>
-                    <!-- Image 3 -->
-                    <div class="work-item">
-                        <img src="https://framerusercontent.com/images/mrToC8qA2uqCOE53THBjKFISOY.png?scale-down-to=512" 
-                             alt="AI Customer Engagement Platform" 
-                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
-                    </div>
-                    <!-- Repeat images for seamless infinite loop -->
-                    <div class="work-item">
-                        <img src="https://framerusercontent.com/images/gJPXKjaGjabrxBY4BjF1R3uw.png?scale-down-to=512" 
-                             alt="AI Sales Automation Project" 
-                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
-                    </div>
-                    <div class="work-item">
-                        <img src="https://framerusercontent.com/images/8WN2RkFuCsGMTItgLfMdoCOGY.png?scale-down-to=512" 
-                             alt="AI Lead Generation System" 
-                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
-                    </div>
-                    <div class="work-item">
-                        <img src="https://framerusercontent.com/images/mrToC8qA2uqCOE53THBjKFISOY.png?scale-down-to=512" 
-                             alt="AI Customer Engagement Platform" 
-                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script>
-        // Make the carousel loop never ending by duplicating items if needed
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousel = document.getElementById('works-carousel');
-            // If not enough items for seamless loop, duplicate again
-            if (carousel.children.length < 12) {
-                for (let i = 0; i < 2; i++) {
-                    for (let j = 0; j < 6; j++) {
-                        carousel.appendChild(carousel.children[j].cloneNode(true));
-                    }
-                }
-            }
-        });
-    </script>
 
     <!-- How HeyDots Works Section (Styled like Service Boxes) -->
     <section class="relative py-20 px-4 md:px-8 bg-[#0A071A]">
@@ -1181,7 +1165,7 @@
                         <span>How does the AI agent sound natural in conversations?</span>
                         <div class="w-6 h-6 flex items-center justify-center">
                             <i class="ri-add-line"></i>
-                                                                                             </div>
+                        </div>
                     </summary>
                     <p class="mt-4 text-gray-300">Our AI is trained on millions of real sales conversations and uses advanced natural language processing to maintain natural, contextual dialogue. It adapts its tone and approach based on the prospect's responses and can handle objections, answer product questions, and guide the conversation toward scheduling a meeting.</p>
                 </details>
@@ -1241,7 +1225,8 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <br>
+
     <section id="contact" class="contact-section">
         <style>
             .contact-section {
