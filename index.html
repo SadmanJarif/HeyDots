@@ -198,20 +198,41 @@
                 transform: translateX(-50%);
             }
         }
-        
-        .animate-scroll {
-            animation: scroll 7s linear infinite;
+
+        .works-carousel-outer {
+            overflow: hidden;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
-        
-        .works-carousel:hover .animate-scroll {
+
+        .works-carousel {
+            display: flex;
+            width: max-content;
+            min-width: 100%;
+            animation: scroll 22s linear infinite; /* Lowered speed (was 14s) */
+        }
+
+        .works-carousel:hover {
             animation-play-state: paused;
         }
-        
-        /* Responsive adjustments for mobile */
+
+        .work-item {
+            flex-shrink: 0;
+            width: 20rem;
+            height: 16rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         @media (max-width: 768px) {
             .work-item {
                 width: 280px;
                 height: 200px;
+            }
+            .works-carousel-outer {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
             }
         }
     </style>
@@ -760,47 +781,39 @@
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto">Discover our latest projects and success stories that showcase our Web & AI solutions in action.</p>
             </div>
             
-            <!-- Auto-sliding Carousel -->
-            <div class="relative">
-                <div class="works-carousel flex animate-scroll">
+            <!-- Auto-sliding Carousel with spacing and infinite loop -->
+            <div class="relative works-carousel-outer">
+                <div class="works-carousel" id="works-carousel">
                     <!-- Image 1 -->
-                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                    <div class="work-item">
                         <img src="https://framerusercontent.com/images/gJPXKjaGjabrxBY4BjF1R3uw.png?scale-down-to=512" 
                              alt="AI Sales Automation Project" 
                              class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
                     </div>
-                    
                     <!-- Image 2 -->
-                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                    <div class="work-item">
                         <img src="https://framerusercontent.com/images/8WN2RkFuCsGMTItgLfMdoCOGY.png?scale-down-to=512" 
                              alt="AI Lead Generation System" 
                              class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
                     </div>
-                    
                     <!-- Image 3 -->
-                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                    <div class="work-item">
                         <img src="https://framerusercontent.com/images/mrToC8qA2uqCOE53THBjKFISOY.png?scale-down-to=512" 
                              alt="AI Customer Engagement Platform" 
                              class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
                     </div>
-                    
-                    <!-- Duplicate images for seamless loop -->
-                    <!-- Image 1 (duplicate) -->
-                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                    <!-- Repeat images for seamless infinite loop -->
+                    <div class="work-item">
                         <img src="https://framerusercontent.com/images/gJPXKjaGjabrxBY4BjF1R3uw.png?scale-down-to=512" 
                              alt="AI Sales Automation Project" 
                              class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
                     </div>
-                    
-                    <!-- Image 2 (duplicate) -->
-                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                    <div class="work-item">
                         <img src="https://framerusercontent.com/images/8WN2RkFuCsGMTItgLfMdoCOGY.png?scale-down-to=512" 
                              alt="AI Lead Generation System" 
                              class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
                     </div>
-                    
-                    <!-- Image 3 (duplicate) -->
-                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                    <div class="work-item">
                         <img src="https://framerusercontent.com/images/mrToC8qA2uqCOE53THBjKFISOY.png?scale-down-to=512" 
                              alt="AI Customer Engagement Platform" 
                              class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
@@ -809,6 +822,20 @@
             </div>
         </div>
     </section>
+    <script>
+        // Make the carousel loop never ending by duplicating items if needed
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.getElementById('works-carousel');
+            // If not enough items for seamless loop, duplicate again
+            if (carousel.children.length < 12) {
+                for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 6; j++) {
+                        carousel.appendChild(carousel.children[j].cloneNode(true));
+                    }
+                }
+            }
+        });
+    </script>
 
     <!-- How HeyDots Works Section (Styled like Service Boxes) -->
     <section class="relative py-20 px-4 md:px-8 bg-[#0A071A]">
