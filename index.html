@@ -188,6 +188,32 @@
         .chat-message-user {
             animation: fadeIn 0.5s ease-out;
         }
+        
+        /* Our Works Carousel Animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .animate-scroll {
+            animation: scroll 7s linear infinite;
+        }
+        
+        .works-carousel:hover .animate-scroll {
+            animation-play-state: paused;
+        }
+        
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            .work-item {
+                width: 280px;
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body class="bg-black text-white min-h-screen relative">
@@ -726,6 +752,64 @@
         </div>
     </section>
 
+    <!-- Our Works Section -->
+    <section class="py-20 px-4 md:px-8 bg-[#0F0A1F] overflow-hidden">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Works</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Discover our latest projects and success stories that showcase our Web & AI solutions in action.</p>
+            </div>
+            
+            <!-- Auto-sliding Carousel -->
+            <div class="relative">
+                <div class="works-carousel flex animate-scroll">
+                    <!-- Image 1 -->
+                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                        <img src="https://framerusercontent.com/images/gJPXKjaGjabrxBY4BjF1R3uw.png?scale-down-to=512" 
+                             alt="AI Sales Automation Project" 
+                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
+                    </div>
+                    
+                    <!-- Image 2 -->
+                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                        <img src="https://framerusercontent.com/images/8WN2RkFuCsGMTItgLfMdoCOGY.png?scale-down-to=512" 
+                             alt="AI Lead Generation System" 
+                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
+                    </div>
+                    
+                    <!-- Image 3 -->
+                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                        <img src="https://framerusercontent.com/images/mrToC8qA2uqCOE53THBjKFISOY.png?scale-down-to=512" 
+                             alt="AI Customer Engagement Platform" 
+                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
+                    </div>
+                    
+                    <!-- Duplicate images for seamless loop -->
+                    <!-- Image 1 (duplicate) -->
+                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                        <img src="https://framerusercontent.com/images/gJPXKjaGjabrxBY4BjF1R3uw.png?scale-down-to=512" 
+                             alt="AI Sales Automation Project" 
+                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
+                    </div>
+                    
+                    <!-- Image 2 (duplicate) -->
+                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                        <img src="https://framerusercontent.com/images/8WN2RkFuCsGMTItgLfMdoCOGY.png?scale-down-to=512" 
+                             alt="AI Lead Generation System" 
+                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
+                    </div>
+                    
+                    <!-- Image 3 (duplicate) -->
+                    <div class="flex-shrink-0 w-80 h-64 flex items-center justify-center">
+                        <img src="https://framerusercontent.com/images/mrToC8qA2uqCOE53THBjKFISOY.png?scale-down-to=512" 
+                             alt="AI Customer Engagement Platform" 
+                             class="w-full h-full object-contain" style="background:transparent; box-shadow:none; border:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- How HeyDots Works Section (Styled like Service Boxes) -->
     <section class="relative py-20 px-4 md:px-8 bg-[#0A071A]">
         <!-- Background decoration -->
@@ -1070,7 +1154,7 @@
                         <span>How does the AI agent sound natural in conversations?</span>
                         <div class="w-6 h-6 flex items-center justify-center">
                             <i class="ri-add-line"></i>
-                        </div>
+                                                                                             </div>
                     </summary>
                     <p class="mt-4 text-gray-300">Our AI is trained on millions of real sales conversations and uses advanced natural language processing to maintain natural, contextual dialogue. It adapts its tone and approach based on the prospect's responses and can handle objections, answer product questions, and guide the conversation toward scheduling a meeting.</p>
                 </details>
@@ -1130,8 +1214,7 @@
         </div>
     </section>
 
-    <br>
-
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <style>
             .contact-section {
