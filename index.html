@@ -255,14 +255,14 @@
                     <i class="ri-play-circle-line ri-xl"></i>
                     <span id="watch-demo-link">Watch Demo</span>
                     <script>
-                        // Watch Demo modal logic
+                        // Watch Demo modal logic (Loom version)
                         document.addEventListener('DOMContentLoaded', function () {
                             const watchDemoLink = document.getElementById('watch-demo-link');
                             if (!watchDemoLink) return;
 
                             // Create modal HTML with improved responsive design
                             const modal = document.createElement('div');
-                            modal.id = 'wistia-demo-modal';
+                            modal.id = 'loom-demo-modal';
                             modal.style.cssText = `
                                 display:none; 
                                 position:fixed; 
@@ -285,7 +285,7 @@
                                     position:relative;
                                     margin: auto;
                                 ">
-                                    <button id="wistia-modal-close" style="
+                                    <button id="loom-modal-close" style="
                                         position:absolute;
                                         top:0.5rem;
                                         right:0.5rem;
@@ -311,43 +311,26 @@
                                         margin-top:1rem;
                                         border-radius:0.5rem;
                                         overflow:hidden;
+                                        background:#000;
                                     ">
-                                        <style>
-                                            wistia-player[media-id='l7cgqo3r9o']:not(:defined) { 
-                                                background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/l7cgqo3r9o/swatch'); 
-                                                display: block; 
-                                                filter: blur(5px); 
-                                                padding-top:56.25%; 
-                                                border-radius:0.5rem;
-                                            }
-                                        </style>
-                                        <wistia-player media-id="l7cgqo3r9o" aspect="1.7777777777777777" style="width:100%;height:100%;border-radius:0.5rem;"></wistia-player>
+                                        <iframe
+                                            src="https://www.loom.com/embed/8a50679c81af430b82010b892329cd9d?sid=a3b75e4e-48fe-4d0e-9090-ac2e06ebcf5d"
+                                            frameborder="0"
+                                            webkitallowfullscreen
+                                            mozallowfullscreen
+                                            allowfullscreen
+                                            style="width:100%;height:100%;border-radius:0.5rem;"
+                                            allow="autoplay; fullscreen"
+                                        ></iframe>
                                     </div>
                                 </div>
                             `;
                             document.body.appendChild(modal);
 
-                            // Load Wistia scripts only once
-                            let wistiaLoaded = false;
-                            function loadWistiaScripts() {
-                                if (wistiaLoaded) return;
-                                wistiaLoaded = true;
-                                const s1 = document.createElement('script');
-                                s1.src = 'https://fast.wistia.com/player.js';
-                                s1.async = true;
-                                document.body.appendChild(s1);
-                                const s2 = document.createElement('script');
-                                s2.src = 'https://fast.wistia.com/embed/l7cgqo3r9o.js';
-                                s2.async = true;
-                                s2.type = 'module';
-                                document.body.appendChild(s2);
-                            }
-
                             watchDemoLink.style.cursor = 'pointer';
                             watchDemoLink.addEventListener('click', function (e) {
                                 e.preventDefault();
                                 modal.style.display = 'flex';
-                                loadWistiaScripts();
                                 document.body.style.overflow = 'hidden';
                             });
 
@@ -358,7 +341,7 @@
                                 }
                             });
 
-                            modal.querySelector('#wistia-modal-close').addEventListener('click', function () {
+                            modal.querySelector('#loom-modal-close').addEventListener('click', function () {
                                 modal.style.display = 'none';
                                 document.body.style.overflow = '';
                             });
